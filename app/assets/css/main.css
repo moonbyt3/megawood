@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background-color: whitesmoke; }
+
+h1, h2, h3 {
+  font-family: "Signika Negative", sans-serif; }
+
+p, a, small, button {
+  font-family: "Open Sans", sans-serif; }
+
+a {
+  text-decoration: none;
+  color: #90887c;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  font-size: 1.2em; }
+  a:hover {
+    color: #ae8648; }
+
+button {
+  border: 1px solid #90887c;
+  border-radius: 2em;
+  padding: 1em 2em;
+  background-color: whitesmoke;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #90887c; }
+  button:hover {
+    border: 2px solid green;
+    color: green; }
+
+.text-center {
+  text-align: center; }
+
+#header {
+  text-align: center;
+  background-color: #141414; }
+  #header nav ul {
+    margin: 0; }
+    #header nav ul li {
+      margin-top: 1em;
+      list-style-type: none;
+      display: inline-block;
+      width: 20%; }
+      #header nav ul li i {
+        margin: 0 1em; }
+
+.jumbotron {
+  min-height: 500px;
+  background-color: #ae8648; }
+  .jumbotron .jumbotron-content {
+    transform: translate(0, 240%); }
+
+article[id="more-info"] {
+  text-align: center; }
+  article[id="more-info"] p {
+    text-align: justify; }
+
+#featured-products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1em;
+  grid-auto-rows: minmax(100px, auto); }
+  #featured-products article {
+    display: inline-block;
+    text-align: center; }
+    #featured-products article p {
+      padding: 2em; }
