@@ -10,6 +10,34 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Signika+Negative" rel="stylesheet">	
 	<script src="assets/js/jquery-3.3.1.min.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script>
+		window.onload = function(){
+			var modal = document.getElementById('article-more-content');
+
+		// Get the button that opens the modal
+		var btn = document.getElementById("more-button");
+
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+		// When the user clicks on the button, open the modal 
+		btn.onclick = function() {
+    		modal.style.display = "block";
+		}
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() {
+    		modal.style.display = "none";
+		}
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+    		if (event.target == modal) {
+        		modal.style.display = "none";
+    		}
+		}
+		}
+	</script>
 </head>
 <body>
 	
@@ -53,7 +81,34 @@
 				</p>
 			</div>
 			
-			<button href="tekst.html" class="button">Pročitajte više</button>
+			<button id="more-button" href="tekst.html" class="button">Pročitajte više</button>
+			<br><br>
+			<div id="article-more-content" class="modal">
+
+				<!-- Modal content -->
+				<div class="modal-content">
+				  <span class="close">&times;</span>
+				  <p><br /><br /><b>Opis proizvoda:</b> Dekorativni drveni malč je organski material za prekrivanje zemljišta i drugih površina kao zaštita i dekorativna masa. Pravi se od četinarskog drveta (beli bor) i 100% je prirodan i usitnjen je na tanke komade 20-40 mm. Obojen je vodenim dekorativnim bojama i termički obrađen na visokoj temperaturi, što doprinosti tome da je postojan čak i u ekstremnim uslovima. Dugotrajan je i bez ograničenja u suvim skladištima. <br /><br />
+
+					<b>Sastav:</b> Drvo belog bora, termički obrađeno, obojeno raznim bojama. Proizvod je upakovan u transparentne vreće od po 5 i 35 litara.<br /><br />
+
+					<b>Primena:</b><br />
+					- dekoracija vanjskih i unutrašnjih prostora<br />
+					- dekoracija saksija, štandova, izloga i slično<br />
+					- drenaža površina<br />
+					- prekrivanje zemljišta<br />
+					- sprečavnje izbijanja trave i korova iz zemljišta<br />
+					- čuva vlagu u zemljištu<br />
+					- zaštita korena od sunca, vetra i hladnoće<br />
+					- podloga za dečija igrališta<br />
+					- podloga za trim staze<br />
+					- podloga životinjama<br /><br />
+
+					<b>Način proizvodnje:</b> Dekorativni drveni malč se pravi od četinarskog drveta (beli bor) tako što se drvo usitnjava u specijalnoj mašini čime se dobija usitnjeno drvo. Veličina lisnatog koma je od 20 mm do 40 mm. Usitnjena masa se separiše na višeslojnim sitima i odvaja po potrebi. Termička obrada tj. sušenje mase se vrši u rotacionoj sušari na visokim temperaturama. Osušena masa se potapa u eko vodene boje, te na taj način osušena masa upija dubinsku boju. Posle natapanja boje, masa se peče na visokim temperaturama i tako postaje veoma postojana čak i u ekstremnim uslovima. Dekorativni drveni malč se proizvodi u raznim bojama. Malč je dugotrajan, bez ograničenja u vršenju unutrašnjih dekoracija. Pakuje se u prozirne najlon vreće kako bi se kupcu pokazao izgled malča, te da bi kupac shvatio da se radi o kvalitetnom proizvodu. Malč je bez mirisa, dugotrajan i postojan.</p>
+				
+				</div>
+			  
+			</div>
 			
 		</article>
 		
