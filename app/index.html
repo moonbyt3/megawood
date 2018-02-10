@@ -8,6 +8,8 @@
 	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">	
 	<link rel="stylesheet" href="assets/css/main.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Signika+Negative" rel="stylesheet">	
+	<script src="assets/js/jquery-3.3.1.min.js"></script>
+	<script src="assets/js/main.js"></script>
 </head>
 <body>
 	
@@ -55,48 +57,65 @@
 			
 		</article>
 		
+		<section class="company-info">
+					
+			<i class="fas fa-info-circle"></i>
+			<div class="info-text">
+				<p>
+					Naša firma ima cilj da na tržištu ponudi jedinstvene proizvode od drveta koji se, pre svega, ističu po <strong>kvalitetu i načinu izrade</strong>.
+					U ponudi je trenutno drveni dekorativni malč, koji je do sada bio rađen samo za <strong>inostrano tržište</strong>, a od sada je preko naše firme dostupan svim zainteresovanim kupcima u zemlji.<br /> </li>
+				</p>
+			</div>
+		</section>
+
 		<!-- Featured products -->
 		<section id="featured-products">
-			<article>
+			<article class="work-item">
 				<a href="images/fulls/crveni.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
 				<h3>Crveni malč</h3>
+				<small><span>699din.</span> <i>599din.</i></small>
 				<p> Vaša biljka će biti dobra onoliko koliko je dobra zemlja u kojoj raste.</p>
+				<br>
+				
 			</article>
 			<article class="6u$ 12u$(xsmall) work-item">
 				<a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /></a>
 				<h3>Prirodni malč</h3>
+				<small><span>699din.</span> <i>599din.</i></small>
 				<p>Veoma dekorativan za pejzažno uređenje. Vrtu daje prirodnu boju, hrani i štiti koren od korova, isušivanja i smrzavanja.</p>
 			</article>
 			<article class="6u 12u$(xsmall) work-item">
 				<a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /></a>
 				<h3>Tortor metus commodo</h3>
+				<small><span>699din.</span> <i>599din.</i></small>
 				<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 			</article>
 			<article class="6u$ 12u$(xsmall) work-item">
 				<a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /></a>
 				<h3>Quam neque phasellus</h3>
+				<small><span>699din.</span> <i>599din.</i></small>
 				<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 			</article>
 			<article class="6u 12u$(xsmall) work-item">
 				<a href="images/fulls/05.jpg" class="image fit thumb"><img src="images/thumbs/05.jpg" alt="" /></a>
 				<h3>Nunc enim commodo aliquet</h3>
+				<small><span>699din.</span> <i>599din.</i></small>
 				<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 			</article>
 			<article class="6u$ 12u$(xsmall) work-item">
 				<a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /></a>
 				<h3>Risus ornare lacinia</h3>
+				<small><span>699din.</span> <i>599din.</i></small>
 				<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 			</article>
 		</section>
 		<div class="text-center"><button>Učitaj još</button></div>
 		
 		<!-- Three -->
-		<h2 class="second">Kontaktirajte nas</h2>
-			<p>Dostupni smo svaki radni dan od 00:00 do 00:00. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>
-			
+		
 		<section id="contact-us" class="center">
-			
 			<div class="form">
+				<h2 class="second">Kontaktirajte nas</h2>
 				<form method="post" action="send_form_email.php" novalidate="novalidate">
 					<div class="row uniform 50%">
 						<div class=""><input type="text" name="first_name" id="name" placeholder="Ime" /></div>
@@ -104,15 +123,19 @@
 						<div class="12u$"><textarea name="message" id="message" placeholder="Poruka" rows="8"></textarea></div>
 					</div>
 					
-						<button type="submit" value="">Pošaljite poruku</button>
+					<button type="submit" value="">Pošaljite poruku</button>
 					
 				</form>
 				
 			</div>
+			
 			<div class="contact-info">
+				
+				<p>Dostupni smo svaki radni dan od 00:00 do 00:00. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>
+				
 				<ul class="labeled-icons">
 					<li>
-						<h1><i class="fas fa-map-marker"></i></h1>
+						<i class="fas fa-map-marker"></i>
 						<div class="contact-content">
 							Braće Lučića 2a/14<br />
 							Novi Sad, 21000<br />
@@ -120,11 +143,10 @@
 						</div>
 					</li>
 					<li>
-						<h3><i class="fas fa-mobile"></i></h3>
+						<i class="fas fa-mobile"></i>
 						+381 64 580-1-155
 					</li>
 					<li>
-						<h3><i class="far fa-envelope"></i></h3>
 						<a href="#">shop@megawood.rs</a>
 					</li>
 				</ul>
@@ -454,24 +476,18 @@
 					</section>  
 				-->
 				
-			</main>
+		</main>
 			
-			<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<ul class="icons">
-						<li><a target="_blank" href="https://www.facebook.com/doomegawood007/" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon fa-envelope-o posalji"><span class="label">Email</span></a></li>
-						<li><a href="http://www.megawood.rs/galerija.html" class="icon fa-picture-o"><span class="label">Galerija</span></a></li>
-						<li><a href="http://www.megawood.rs/proizvodi.html" class="icon fa-shopping-cart"><span class="label">Shop</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li style="color:white;font-size:1.3em;">Naša firma ima cilj da na tržištu ponudi jedinstvene proizvode od drveta koji se, pre svega, ističu po <b>kvalitetu i načinu izrade</b>.
-							U ponudi je trenutno drveni dekorativni malč, koji je do sada bio rađen samo za inostrano tržište, a od sada je preko naše firme dostupan svim zainteresovanim kupcima u zemlji.<br /> </li>
-							<li> &copy; Megawood 007 doo.</li>
-							<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</div>
-				</footer>
-			</body>
-			</html>
+		<!-- Footer -->
+		<footer id="footer">
+			<nav>
+				<ul class="icons">
+					<li><a target="_blank" href="https://www.facebook.com/doomegawood007/"><i class="fab fa-facebook"></i>Facebook</a></li>
+					<li><a href="#"><i class="far fa-envelope-open"></i>Email</a></li>
+					<li><a href="http://www.megawood.rs/galerija.html" class="icon"><i class="far fa-image"></i>Galerija</a></li>
+					<li><a href="http://www.megawood.rs/proizvodi.html" class="icon"> <i class="fa fa-shopping-cart"></i>Shop</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</body>
+</html>

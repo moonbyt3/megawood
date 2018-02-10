@@ -1,8 +1,8 @@
 $color-link: #90887c;
 $color-nav: #141414;
-$color-hover: #ae8648;
-$color-border: green;
-$color-background: whitesmoke;
+$color-hover: #F2C777;
+$color-border: $color-nav;
+$color-background: #efefef;
 
 $font-heading: 'Signika Negative', sans-serif;
 $font-base: 'Open Sans', sans-serif;
@@ -30,7 +30,10 @@ a {
 	}
 }
 button {
-	border: 1px solid $color-link;
+	border-style: none;
+    border-color: $color-link;
+    border-image: none;
+	border: 1px solid;
 	border-radius: 2em;
 	padding: 1em 2em;
 	background-color: $color-background;
@@ -38,9 +41,29 @@ button {
 	font-weight: 700;
 	color: $color-link;
 	&:hover {
-		border: 2px solid $color-border;
+		border: -3px solid $color-border;
 		color: $color-border;
+		padding: calc(1em-2px);
 	}
+}
+nav {
+	background-color: $color-nav;
+	ul {
+		margin: 0;
+		li {
+			margin-top: 1em;
+			list-style-type: none;
+			display: inline-block;
+			width: 20%;
+			i {
+				margin: 0 1em;
+			}
+			
+		}
+	}
+}
+::placeholder {
+	color: $color-nav;
 }
 .text-center {
 	text-align: center;
@@ -48,23 +71,6 @@ button {
 #header {
 	text-align: center;
 	background-color: $color-nav;
-	nav {
-		
-		ul {
-			
-			margin: 0;
-			li {
-				margin-top: 1em;
-				list-style-type: none;
-				display: inline-block;
-				width: 20%;
-				i {
-					margin: 0 1em;
-				}
-				
-			}
-		}
-	}
 }
 .jumbotron {
 	min-height: 500px;
@@ -116,66 +122,135 @@ main {
 		}
 	}
 	button {
-		margin-top: 1em;
+		margin: 2.5% 0;
+	}
+}
+
+.company-info {
+	text-align: center;
+	i {
+		font-size: 10em;
+		margin: 2rem;
+		color: $color-hover;
+	}
+	.info-text {
+		display: inline-block;
+		width: 60%;
+		vertical-align: text-bottom;
+		margin-left: 2em;
+		p {
+			margin-top: 0;
+			text-align: center;
+		}
 	}
 }
 
 
 #featured-products {
+	margin-top: 5%;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-gap: 1em;
 	grid-auto-rows: minmax(100px, auto);
-		article {
-			display: inline-block;
-			text-align: center;
-			p {
-				padding: 2em;
-			}
-			button {
-				margin-top: 1em;
+	.work-item {
+		display: inline-block;
+		text-align: center;
+		
+		button {
+			margin-top: 1em;
+		}
+		a {
+			img:hover {
+				box-shadow: 5px 5px 5px #aaaaaa;
 			}
 		}
+		small {
+			span {
+				text-decoration: line-through;
+			}
+			i {
+				font-size: 120%;
+				color: $color-nav;
+			}
+		}
+	}	
+
 }
 
 #contact-us {
+	margin-top: 2em;
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-gap: 1em;
-	grid-auto-rows: minmax(100px, auto);
-	text-align: center;
+	grid-template-columns: minmax(450px, 1fr);
+	grid-template-areas: "form info";
+	.form {
+		background-color: whitesmoke;
+		padding: 0 2em 2em 2em;
+		border-top-left-radius: 2em;
+		border-bottom-left-radius: 2em;
+		h2 {
+			text-align: center;
+			color: $color-nav;
+		}	
+	}
 	form {
+		grid-area: form;
 		input,textarea {
 			margin: 1em 0;
-			width: 80%;
+			width: 100%;
 			border: 1px solid $color-link;
 			border-radius: 0.5em;
 			padding: 1em;
-			background-color: $color-background;
+			background-color: whitesmoke;
 			outline: none;
 			resize: none;
+			
 		}
 		input:focus, textarea:focus {
 			border: 2px solid $color-border;
 		}
+		button {
+			margin: 1em -50px; 
+    	position:relative;
+   	 	left:41%;
+		}
 	}
 	.contact-info {
+		grid-area: info;
+		text-align: center;
+		justify-self: center;
+		background-color: $color-nav;
+		color: $color-hover;
+		padding: 1em;
+		border-top-right-radius: 2em;
+		border-bottom-right-radius: 2em;
 		ul {
 			list-style: none;
-			display: grid;
-			grid-template-columns: 1fr;
-			
 			li {
-				display: grid;
-				grid-template-columns: 64px auto;
-				grid-auto-rows: minmax(100px, auto);
-				h1 {
-					margin: 0;
+				margin-top: 3em;
+				
+				i {
+					margin-right: 1em;
+					display: inline-block;
+					vertical-align: top;
+					
 				}
-				.contact-content {
+				div {
+					display: inline-block;
 				}
 			}
 		}
 	}
+}
 
+
+
+
+
+footer {
+	nav {
+		padding-bottom: 1em;
+		ul {
+			text-align: center;
+		}
+	}
 }

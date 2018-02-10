@@ -3,7 +3,7 @@
 
 body {
   margin: 0;
-  background-color: whitesmoke; }
+  background-color: #efefef; }
 
 h1, h2, h3 {
   font-family: "Signika Negative", sans-serif; }
@@ -18,19 +18,38 @@ a {
   letter-spacing: 0.2em;
   font-size: 1.2em; }
   a:hover {
-    color: #ae8648; }
+    color: #F2C777; }
 
 button {
-  border: 1px solid #90887c;
+  border-style: none;
+  border-color: #90887c;
+  border-image: none;
+  border: 1px solid;
   border-radius: 2em;
   padding: 1em 2em;
-  background-color: whitesmoke;
+  background-color: #efefef;
   text-transform: uppercase;
   font-weight: 700;
   color: #90887c; }
   button:hover {
-    border: 2px solid green;
-    color: green; }
+    border: -3px solid #141414;
+    color: #141414;
+    padding: calc(1em-2px); }
+
+nav {
+  background-color: #141414; }
+  nav ul {
+    margin: 0; }
+    nav ul li {
+      margin-top: 1em;
+      list-style-type: none;
+      display: inline-block;
+      width: 20%; }
+      nav ul li i {
+        margin: 0 1em; }
+
+::placeholder {
+  color: #141414; }
 
 .text-center {
   text-align: center; }
@@ -38,19 +57,10 @@ button {
 #header {
   text-align: center;
   background-color: #141414; }
-  #header nav ul {
-    margin: 0; }
-    #header nav ul li {
-      margin-top: 1em;
-      list-style-type: none;
-      display: inline-block;
-      width: 20%; }
-      #header nav ul li i {
-        margin: 0 1em; }
 
 .jumbotron {
   min-height: 500px;
-  background-color: #ae8648; }
+  background-color: #F2C777; }
   .jumbotron .jumbotron-content {
     transform: translate(0, 240%); }
 
@@ -87,45 +97,93 @@ main {
       margin: 0 2em;
       line-height: 1.5em; }
   #more-info button {
-    margin-top: 1em; }
+    margin: 2.5% 0; }
+
+.company-info {
+  text-align: center; }
+  .company-info i {
+    font-size: 10em;
+    margin: 2rem;
+    color: #F2C777; }
+  .company-info .info-text {
+    display: inline-block;
+    width: 60%;
+    vertical-align: text-bottom;
+    margin-left: 2em; }
+    .company-info .info-text p {
+      margin-top: 0;
+      text-align: center; }
 
 #featured-products {
+  margin-top: 5%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1em;
   grid-auto-rows: minmax(100px, auto); }
-  #featured-products article {
+  #featured-products .work-item {
     display: inline-block;
     text-align: center; }
-    #featured-products article p {
-      padding: 2em; }
-    #featured-products article button {
+    #featured-products .work-item button {
       margin-top: 1em; }
+    #featured-products .work-item a img:hover {
+      box-shadow: 5px 5px 5px #aaaaaa; }
+    #featured-products .work-item small span {
+      text-decoration: line-through; }
+    #featured-products .work-item small i {
+      font-size: 120%;
+      color: #141414; }
 
 #contact-us {
+  margin-top: 2em;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1em;
-  grid-auto-rows: minmax(100px, auto);
-  text-align: center; }
-  #contact-us form input, #contact-us form textarea {
-    margin: 1em 0;
-    width: 80%;
-    border: 1px solid #90887c;
-    border-radius: 0.5em;
-    padding: 1em;
+  grid-template-columns: minmax(450px, 1fr);
+  grid-template-areas: "form info"; }
+  #contact-us .form {
     background-color: whitesmoke;
-    outline: none;
-    resize: none; }
-  #contact-us form input:focus, #contact-us form textarea:focus {
-    border: 2px solid green; }
-  #contact-us .contact-info ul {
-    list-style: none;
-    display: grid;
-    grid-template-columns: 1fr; }
-    #contact-us .contact-info ul li {
-      display: grid;
-      grid-template-columns: 64px auto;
-      grid-auto-rows: minmax(100px, auto); }
-      #contact-us .contact-info ul li h1 {
-        margin: 0; }
+    padding: 0 2em 2em 2em;
+    border-top-left-radius: 2em;
+    border-bottom-left-radius: 2em; }
+    #contact-us .form h2 {
+      text-align: center;
+      color: #141414; }
+  #contact-us form {
+    grid-area: form; }
+    #contact-us form input, #contact-us form textarea {
+      margin: 1em 0;
+      width: 100%;
+      border: 1px solid #90887c;
+      border-radius: 0.5em;
+      padding: 1em;
+      background-color: whitesmoke;
+      outline: none;
+      resize: none; }
+    #contact-us form input:focus, #contact-us form textarea:focus {
+      border: 2px solid #141414; }
+    #contact-us form button {
+      margin: 1em -50px;
+      position: relative;
+      left: 41%; }
+  #contact-us .contact-info {
+    grid-area: info;
+    text-align: center;
+    justify-self: center;
+    background-color: #141414;
+    color: #F2C777;
+    padding: 1em;
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em; }
+    #contact-us .contact-info ul {
+      list-style: none; }
+      #contact-us .contact-info ul li {
+        margin-top: 3em; }
+        #contact-us .contact-info ul li i {
+          margin-right: 1em;
+          display: inline-block;
+          vertical-align: top; }
+        #contact-us .contact-info ul li div {
+          display: inline-block; }
+
+footer nav {
+  padding-bottom: 1em; }
+  footer nav ul {
+    text-align: center; }
