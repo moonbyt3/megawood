@@ -10,34 +10,6 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Signika+Negative" rel="stylesheet">	
 	<script src="assets/js/jquery-3.3.1.min.js"></script>
 	<script src="assets/js/main.js"></script>
-	<script>
-		window.onload = function(){
-			var modal = document.getElementById('article-more-content');
-
-		// Get the button that opens the modal
-		var btn = document.getElementById("more-button");
-
-		// Get the <span> element that closes the modal
-		var span = document.getElementsByClassName("close")[0];
-
-		// When the user clicks on the button, open the modal 
-		btn.onclick = function() {
-    		modal.style.display = "block";
-		}
-
-		// When the user clicks on <span> (x), close the modal
-		span.onclick = function() {
-    		modal.style.display = "none";
-		}
-
-		// When the user clicks anywhere outside of the modal, close it
-		window.onclick = function(event) {
-    		if (event.target == modal) {
-        		modal.style.display = "none";
-    		}
-		}
-		}
-	</script>
 </head>
 <body>
 	
@@ -125,48 +97,54 @@
 
 		<!-- Featured products -->
 		<section id="featured-products">
+			
+			<div id="modal-product" class="modal">
+				<div class="modal-content">
+					
+				</div>
+			</div>
 			<article class="work-item">
-				<a href="images/fulls/crveni.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
+				<a href="#" class="image"><img id="slika" src="images/thumbs/01.jpg" alt="" /></a>
 				<h3>Crveni malč</h3>
 				<small><span>699din.</span> <i>599din.</i></small>
 				<p> Vaša biljka će biti dobra onoliko koliko je dobra zemlja u kojoj raste.</p>
 				<br>
 				
 			</article>
-			<article class="6u$ 12u$(xsmall) work-item">
-				<a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /></a>
+			<article class="work-item">
+				<a href="#" class="image"><img src="images/thumbs/02.jpg" alt="" /></a>
 				<h3>Prirodni malč</h3>
 				<small><span>699din.</span> <i>599din.</i></small>
 				<p>Veoma dekorativan za pejzažno uređenje. Vrtu daje prirodnu boju, hrani i štiti koren od korova, isušivanja i smrzavanja.</p>
 			</article>
-			<article class="6u 12u$(xsmall) work-item">
-				<a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /></a>
+			<article class="work-item">
+				<a href="#" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /></a>
 				<h3>Tortor metus commodo</h3>
 				<small><span>699din.</span> <i>599din.</i></small>
 				<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 			</article>
-			<article class="6u$ 12u$(xsmall) work-item">
-				<a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /></a>
+			<article class="work-item">
+				<a href="#" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /></a>
 				<h3>Quam neque phasellus</h3>
 				<small><span>699din.</span> <i>599din.</i></small>
 				<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 			</article>
-			<article class="6u 12u$(xsmall) work-item">
-				<a href="images/fulls/05.jpg" class="image fit thumb"><img src="images/thumbs/05.jpg" alt="" /></a>
+			<article class="work-item">
+				<a href="#" class="image fit thumb"><img src="images/thumbs/05.jpg" alt="" /></a>
 				<h3>Nunc enim commodo aliquet</h3>
 				<small><span>699din.</span> <i>599din.</i></small>
 				<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 			</article>
-			<article class="6u$ 12u$(xsmall) work-item">
-				<a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /></a>
+			<article class="work-item">
+				<a href="#" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /></a>
 				<h3>Risus ornare lacinia</h3>
 				<small><span>699din.</span> <i>599din.</i></small>
 				<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 			</article>
 		</section>
-		<div class="text-center"><button>Učitaj još</button></div>
+		<div class="text-center"><button>Svi proizvodi</button></div>
 		
-		<!-- Three -->
+		<!-- Contact form and info about company -->
 		
 		<section id="contact-us" class="center">
 			<div class="form">
@@ -191,11 +169,13 @@
 				<ul class="labeled-icons">
 					<li>
 						<i class="fas fa-map-marker"></i>
-						<div class="contact-content">
-							Braće Lučića 2a/14<br />
-							Novi Sad, 21000<br />
-							Srbija
-						</div>
+						
+							<p>
+								Braće Lučića 2a/14 <br>
+								Novi Sad, 21000
+								Srbija
+							</p>
+						
 					</li>
 					<li>
 						<i class="fas fa-mobile"></i>

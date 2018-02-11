@@ -60,12 +60,15 @@ nav {
 
 .jumbotron {
   min-height: 500px;
-  background-color: #F2C777; }
+  background-image: url("../../images/header.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
   .jumbotron .jumbotron-content {
-    transform: translate(0, 240%); }
+    transform: translate(0, 240%);
+    color: #efefef; }
 
 .center {
-  width: 80%;
+  width: 90%;
   margin: 0 auto; }
 
 article[id="more-info"] {
@@ -98,44 +101,74 @@ main {
       line-height: 1.5em; }
   #more-info button {
     margin: 2.5% 0; }
-  #more-info .modal {
-    display: none;
-    /* Hidden by default */
-    position: fixed;
-    /* Stay in place */
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */ }
+  .modal .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    /* Could be more or less, depending on screen size */ }
+    .modal .modal-content p {
+      text-align: justify; }
+    .modal .modal-content .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold; }
+      .modal .modal-content .close:hover, .modal .modal-content .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer; }
+  .modal .product-holder {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: 30vh;
+    left: 34vw;
     z-index: 1;
-    /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%;
-    /* Full width */
-    height: 100%;
-    /* Full height */
-    overflow: auto;
-    /* Enable scroll if needed */
-    background-color: black;
-    /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.4);
-    /* Black w/ opacity */ }
-    #more-info .modal .modal-content {
-      background-color: #fefefe;
-      margin: 15% auto;
-      /* 15% from the top and centered */
-      padding: 20px;
-      border: 1px solid #888;
-      width: 80%;
-      /* Could be more or less, depending on screen size */ }
-      #more-info .modal .modal-content p {
-        text-align: justify; }
-      #more-info .modal .modal-content .close {
-        color: #aaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold; }
-        #more-info .modal .modal-content .close:hover, #more-info .modal .modal-content .close:focus {
-          color: black;
-          text-decoration: none;
-          cursor: pointer; }
+    cursor: auto;
+    min-width: 200px;
+    min-height: 100px;
+    width: auto;
+    height: auto; }
+    .modal .product-holder .closer::before {
+      box-sizing: content-box;
+      border-radius: 100%;
+      border: solid 3px rgba(255, 255, 255, 0.5);
+      text-align: center;
+      color: #efefef;
+      display: block;
+      font-size: 1em;
+      height: 1.75em;
+      width: 1.75em;
+      line-height: 1.75em;
+      margin: -0.875em 0 0 -0.875em;
+      position: absolute;
+      top: 3%;
+      right: 0; }
+    .modal .product-holder img {
+      max-height: 500px; }
 
 .company-info {
   text-align: center; }
@@ -215,9 +248,14 @@ main {
       #contact-us .contact-info ul li {
         margin-top: 3em; }
         #contact-us .contact-info ul li i {
+          font-size: 3em;
           margin-right: 1em;
           display: inline-block;
-          vertical-align: top; }
+          vertical-align: middle; }
+        #contact-us .contact-info ul li p {
+          margin: 0;
+          display: inline-block;
+          vertical-align: middle; }
         #contact-us .contact-info ul li div {
           display: inline-block; }
 
