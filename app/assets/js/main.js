@@ -49,6 +49,11 @@ window.onload = function(){
         closeButton.onclick = function() {
             modalProduct.style.display = "none";
         }
+        window.onclick = function(event) {
+            if (event.target == modalProduct) {
+                modalProduct.style.display = "none";
+            }
+        }
     }
 
     for (let i = 0; i < product.length; i++){
